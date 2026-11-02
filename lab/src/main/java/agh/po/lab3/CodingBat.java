@@ -34,6 +34,16 @@ public class CodingBat {
         return a;
     }
 
+    public String firstHalf(String str) {
+        if((str.length() & 1) == 0){
+            return str.substring(0, str.length() / 2);
+        }
+        else {
+            return str;
+        }
+    }
+
+
 
     public static void main(String[] args) {
         CodingBat cb=new CodingBat();
@@ -41,6 +51,8 @@ public class CodingBat {
         cb.loneTeen(1,2);
         int[] a = {1,2,13,1,1};
         cb.sum13(a);
+        String txt = "WooHoo";
+        cb.firstHalf(txt);
     }
 
 }
