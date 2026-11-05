@@ -1,5 +1,8 @@
 package agh.po.lab3;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CodingBat {
 
     public boolean sleepIn(boolean weekday, boolean vacation) {
@@ -43,6 +46,16 @@ public class CodingBat {
         }
     }
 
+    public Map<String, String> mapAB2(Map<String, String> map) {
+        if (map.containsKey("a") && map.containsKey("b")) {
+            if (map.get("a").equals(map.get("b"))) {
+                map.remove("a");
+                map.remove("b");
+            }
+        }
+        return map;
+    }
+
 
 
     public static void main(String[] args) {
@@ -53,6 +66,21 @@ public class CodingBat {
         cb.sum13(a);
         String txt = "WooHoo";
         cb.firstHalf(txt);
+        Map<String, String> testMap = new HashMap<String, String>();
+        testMap.put("a", "aaa");
+        testMap.put("b", "aaa");
+        testMap.put("c", "cake");
+        Map<String, String> testmap2 = cb.mapAB2(testMap);
+        System.out.println(testmap2);
     }
 
 }
+
+
+
+
+//System.out.println("Przed modyfikacją: " + testMap);
+//          testMap.put("a", "aaa");
+//        testMap.put("b", "aaa");
+//        testMap.put("c", "cake");
+//System.out.println("Po modyfikacji:    " + testmap2);

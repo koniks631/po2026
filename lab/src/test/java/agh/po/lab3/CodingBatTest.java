@@ -2,6 +2,9 @@ package agh.po.lab3;
 
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.Assert.*;
 
 public class CodingBatTest {
@@ -36,5 +39,19 @@ public class CodingBatTest {
        assertEquals("Woo", cb.firstHalf("WooHoo"));
        assertEquals("Hello", cb.firstHalf("HelloThere"));
        assertEquals("abc", cb.firstHalf("abcdef"));
+    }
+
+    @Test
+    public void mapAB2() {
+        CodingBat cb = new CodingBat();
+
+        Map<String, String> map1 = new HashMap<>(Map.of("a", "aaa", "b", "aaa", "c", "cake"));
+        assertEquals(Map.of("c", "cake"), cb.mapAB2(map1));
+
+        Map<String, String> map2 = new HashMap<>(Map.of("a", "aaa", "b", "bbb"));
+        assertEquals(Map.of("a", "aaa", "b", "bbb"), cb.mapAB2(map2));
+
+        Map<String, String> map3 = new HashMap<>(Map.of("a", "aaa", "b", "bbb", "c", "aaa"));
+        assertEquals(Map.of("a", "aaa", "b", "bbb", "c", "aaa"), cb.mapAB2(map3));
     }
 }
