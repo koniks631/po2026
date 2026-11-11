@@ -57,6 +57,20 @@ public class CodingBat {
     }
 
 
+    public Map<String, Integer> wordCount(String[] strings) {
+        Map<String, Integer> map = new HashMap<>();
+        for (String s : strings) {
+            if (map.containsKey(s)) {
+                int obecnyLicznik = map.get(s);
+                map.put(s, obecnyLicznik + 1);
+            } else {
+                map.put(s, 1);
+            }
+        }
+        return map;
+    }
+
+
 
     public static void main(String[] args) {
         CodingBat cb=new CodingBat();
@@ -72,6 +86,10 @@ public class CodingBat {
         testMap.put("c", "cake");
         Map<String, String> testmap2 = cb.mapAB2(testMap);
         System.out.println(testmap2);
+
+        String[] testArray = {"a", "b", "a", "c", "b"};
+        Map<String, Integer> wynik = cb.wordCount(testArray);
+        System.out.println(wynik);
     }
 
 }
