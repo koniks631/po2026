@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Zoo {
     public static void main(String[] args){
-        ArrayList<Animal> list = new ArrayList<>();
+        ArrayList<Animal> list = new ArrayList<>(); 
 
     }
 }
