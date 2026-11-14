@@ -2,7 +2,7 @@ package agh.po.animals;
 
 public class Snake extends Animal {
     public Snake() {
-        this.name = "Snake";
+        this.name = "waz";
         this.legs = 0;
     }
 
