@@ -10,5 +10,11 @@ public class Silnik extends Komponent {
         this.obroty = 0;
     }
 
-    public void uruchom()
+    public void uruchom(){
+        this.obroty = Math.min(800, maxObroty);
+    }
+
+    public void zatrzymaj(){
+        this.obroty = 0;
+    }
 }
