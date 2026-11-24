@@ -9,6 +9,8 @@ public class Komponent {
     public Komponent(String producent, String model, double waga, double cena){
         this.producent = producent;
         this.model = model;
+        this.waga = waga;
+        this.cena = cena;
     }
 
     public String getProducent(){

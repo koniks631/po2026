@@ -18,4 +18,8 @@ public class Sprzęgło extends Komponent {
     public boolean czysprzeglo(){
         return stanSprzęgła;
     }
+
+    public void zwolnij() {
+        odcisnij();
+    }
 }

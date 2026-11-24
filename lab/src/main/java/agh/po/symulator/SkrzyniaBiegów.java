@@ -27,4 +27,16 @@ public class SkrzyniaBiegów extends Komponent {
             aktualnyBieg--;
         }
     }
+
+    public void zerujBieg() {
+        this.aktualnyBieg = 0;
+    }
+
+    public int getAktBieg() {
+        return aktualnyBieg;
+    }
+
+    public Sprzęgło getSprzeglo() {
+        return sprzeglo;
+    }
 }
