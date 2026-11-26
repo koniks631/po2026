@@ -22,6 +22,22 @@ public class Pozycja {
         this.y += deltaY;
     }
 
+    public void przemiesc(double dt, double v, Pozycja cel){
+        double dx = cel.getX() - this.getX();
+        double dy = cel.getY() - this.getY();
+        double odleglosc = Math.sqrt(dx*dx + dy*dy);
+        double krok = v * dt;
+
+        if(odleglosc<= krok){
+            this.x = cel.getX();
+            this.y = cel.getY();
+        }
+        else {
+            this.x += krok * (dx/odleglosc);
+            this.y += krok * (dy/odleglosc);
+        }
+    }
+
     public void ustawPozycje(double x, double y){
         this.x = x;
         this.y = y;
